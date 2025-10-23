@@ -11,15 +11,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+
+        <!-- 🏠 Home screen -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 🔑 Reset password screen -->
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="true"
+            android:parentActivityName=".ForgetPasswordActivity" />
+
+        <!-- ❓ Forgot password screen -->
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 📝 Registration screen -->
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 🚪 Login screen (launcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
